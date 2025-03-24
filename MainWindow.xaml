@@ -1,0 +1,37 @@
+﻿<Window x:Name="StudentPerformanceAnalysisApp" x:Class="StudentPerformanceAnalysisApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentPerformanceAnalysisApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Icon="/myicon.ico">
+    <DockPanel>
+        <!-- 菜单栏 -->
+        <Menu DockPanel.Dock="Top" Background="White">
+            <MenuItem Header="_文件(F)">
+                <MenuItem Header="_新建(N)" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_打开(O)" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="_保存(S)" InputGestureText="Ctrl+S"/>
+                <Separator/>
+                <MenuItem Header="_退出(X)" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_编辑(E)">
+                <MenuItem Header="_撤销(Z)" InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="_重做(Y)" InputGestureText="Ctrl+Y"/>
+                <Separator/>
+                <MenuItem Header="_剪切(T)" InputGestureText="Ctrl+X"/>
+                <MenuItem Header="_复制(C)" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="_粘贴(P)" InputGestureText="Ctrl+V"/>
+            </MenuItem>
+        </Menu>
+        <!-- 分割线 -->
+        <Separator DockPanel.Dock="Top" Height="2" Background="Gray"/>
+
+        <!-- 主内容 -->
+        <Grid>
+            <TextBlock Text="这里是主内容区域" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
+    </DockPanel>
+</Window>
